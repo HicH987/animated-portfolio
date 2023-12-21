@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---Smooth scrolling--- */
+/* Enable mandatory vertical scrolling snapping for the entire HTML document => 
+i.e: his means that when scrolling vertically, the content will snap to specific positions, making the scrolling experience smoother and more controlled */
+html {
+  scroll-snap-type: y mandatory;
+
+  /* Enable smooth scrolling behavior for the entire document */
+  scroll-behavior: smooth;
+}
+
+/* Define the scrolling behavior for each section */
+section {
+  /* Center-align each section when snapping during scrolling */
+  scroll-snap-align: center;
+}
