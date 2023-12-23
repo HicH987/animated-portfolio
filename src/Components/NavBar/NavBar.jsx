@@ -7,7 +7,7 @@ export default function NavBar() {
       <SideMenu />
       <div className="flex flex-row items-center justify-between w-full h-full m-auto max-w-[1366px]">
         <motion.h1
-          className="text-lg font-bold text-white"
+          className="text-lg text-white"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
