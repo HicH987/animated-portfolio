@@ -3,9 +3,9 @@ import SideMenu from "./SideMenu/SideMenu";
 
 export default function NavBar() {
   return (
-    <nav className="flex flex-row gap-0 h-[100px] items-center border">
+    <nav className="flex flex-row gap-0 h-[100px] items-center">
       <SideMenu />
-      <div className=" border flex flex-row items-center justify-between w-full h-full m-auto max-w-[1366px]">
+      <div className="flex flex-row items-center justify-between w-full h-full m-auto max-w-[1366px]">
         <motion.h1
           className="text-lg font-bold text-white"
           initial={{ opacity: 0, scale: 0.5 }}
