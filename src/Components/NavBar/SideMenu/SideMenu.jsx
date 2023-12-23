@@ -1,6 +1,6 @@
+import useOutsideClick from "@/Hooks/useOutsideClick";
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import useOutsideClick from "./../../../Hooks/useOutsideClick";
 import { MenuToggle } from "./MenuToggle";
 import { NavigationLinks } from "./NavigationLinks";
 
@@ -23,13 +23,11 @@ const variants = {
   },
 };
 
-export default function SideMenu() {
+export default function SideMenu({ links }) {
   const menuRef = useRef();
   const [isOpen, setIsOpen] = useState(false);
-  const closeMenu =  () => isOpen && setIsOpen(false)
-  useOutsideClick(menuRef,closeMenu);
-
-  const links = ["HomePage", "Services", "Portfolio", "Contact"];
+  const closeMenu = () => isOpen && setIsOpen(false);
+  useOutsideClick(menuRef, closeMenu);
 
   return (
     <div className="flex items-center justify-center h-full p-10">
@@ -42,7 +40,10 @@ export default function SideMenu() {
           className="z-[999] fixed top-0 left-0 bottom-0 w-[300px] bg-white"
           variants={variants}
         >
-          <NavigationLinks links={links} closeMenu={closeMenu}></NavigationLinks>
+          <NavigationLinks
+            links={links}
+            closeMenu={closeMenu}
+          ></NavigationLinks>
         </motion.div>
 
         <MenuToggle
