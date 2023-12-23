@@ -33,3 +33,18 @@ section {
   /* Center-align each section when snapping during scrolling */
   scroll-snap-align: center;
 }
+
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c1d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
