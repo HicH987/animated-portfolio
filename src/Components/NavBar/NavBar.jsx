@@ -15,7 +15,7 @@ export default function NavBar() {
           HICH987 DEV
         </motion.h1>
 
-        <ul className="flex flex-row gap-[20px]">
+        <ul className="flex flex-row gap-[20px] mr-3">
           <a href="">
             <img className="w-5" src="/facebook.png" alt="" />
           </a>
