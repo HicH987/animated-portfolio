@@ -1,4 +1,4 @@
-import NavBar from './Components/NavBar';
+import NavBar from './Components/NavBar/NavBar';
 import "./global.css";
 
 const App = () => {
