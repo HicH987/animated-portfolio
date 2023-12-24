@@ -1,15 +1,19 @@
 import Cursor from "@/Components/Cursor/Cursor";
+import Hero from "@/Components/Hero/Hero";
 import NavBar from "@/Components/NavBar/NavBar";
 import "@/global.css";
 
 const App = () => {
   return (
-    <main>
+    <main className="flex flex-col">
       <Cursor />
+      
       <section className="h-screen" id="HomePage">
         <NavBar />
+        <Hero/>
       </section>
-      <section className="h-screen" id="Services">
+
+      <section className="h-screen border border-orange-400" id="Services">
         Parallax
       </section>
       <section className="h-screen">Services</section>
