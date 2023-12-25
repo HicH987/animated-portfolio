@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import SideMenu from "./SideMenu/SideMenu";
-import { SocialMediasList } from "./SocialMediasList/SocialMediasList";
+import { SocialMediasList } from "./SocialMediasList";
 
 const socialMedias = [
   {

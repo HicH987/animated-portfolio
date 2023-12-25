@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const variants = {
   open: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.2,
     },
   },
 };
@@ -12,15 +12,12 @@ const iconVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      x: { stiffness: 1000, velocity: -100 },
+      x: { type: "spring", stiffness: 80 },
     },
   },
   closed: {
-    x: 50,
+    x: -50,
     opacity: 0,
-    transition: {
-      x: { stiffness: 1000 },
-    },
   },
 };
 
@@ -37,7 +34,8 @@ export function SocialMediasList({ socialMedias }) {
           key={i}
           href={socialMedia.url}
           variants={iconVariants}
-
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.95 }}
         >
           <img className="w-5" src={socialMedia.icon} alt={socialMedia.name} />
         </motion.a>
