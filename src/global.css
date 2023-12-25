@@ -10,7 +10,21 @@
 }
 
 body {
-  background-color: #0c0c1d;
+  /* background-color: #0c0c1d; */
+  background-image: linear-gradient(
+    100deg,
+    hsl(240deg 44% 8%) 0%,
+    hsl(240deg 44% 8%) 20%,
+    hsl(240deg 44% 8%) 29%,
+    hsl(240deg 44% 8%) 36%,
+    hsl(240deg 44% 8%) 43%,
+    hsl(240deg 44% 8%) 50%,
+    hsl(240deg 44% 12%) 57%,
+    hsl(240deg 43% 15%) 64%,
+    hsl(240deg 42% 19%) 71%,
+    hsl(240deg 42% 22%) 80%,
+    hsl(240deg 41% 26%) 100%
+  );
   color: lightgray;
 }
 a {
@@ -33,7 +47,6 @@ section {
   /* Center-align each section when snapping during scrolling */
   scroll-snap-align: center;
 }
-
 
 /* Customize the scrollbar */
 ::-webkit-scrollbar {
