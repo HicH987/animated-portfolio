@@ -36,7 +36,7 @@ export function LeftSideHero({ className }) {
       >
         <h1 className="flex text-3xl text-slate-300">
           <motion.span
-            initial={{ rotate: 0,   }}
+            initial={{ rotate: 0 }}
             animate={{
               rotate: [20, -20, 20, -20, 0],
             }}
@@ -63,12 +63,20 @@ export function LeftSideHero({ className }) {
       </motion.div>
 
       <motion.div className="flex flex-row space-x-10" variants={itemVariants}>
-        <button className="px-6 py-2 text-white bg-purple-800 rounded-md">
+        <motion.button
+          className="px-6 py-2 text-white bg-purple-800 rounded-md"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.95 }}
+        >
           Hire me
-        </button>
-        <button className="px-6 py-2 text-purple-800 border border-purple-800 rounded-md">
+        </motion.button>
+        <motion.button
+          className="px-6 py-2 text-purple-800 border border-purple-800 rounded-md"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.95 }}
+        >
           Contact me
-        </button>
+        </motion.button>
       </motion.div>
 
       <motion.div
