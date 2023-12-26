@@ -2,9 +2,38 @@ import { motion } from "framer-motion";
 import { LeftSideHero } from "./LeftSideHero";
 import { RightSideHero } from "./RightSideHero";
 
+// const starVariants = {
+//   hidden: { opacity: 0.5, scale: 0.5 },
+//   visible: {
+//     opacity: 1,
+//     scale: 0.9,
+//     transition: {
+//       duration: 2,
+//       repeat: Infinity,
+//       repeatType: "mirror",
+//       delay: 2,
+//     },
+//   },
+// };
+
 export default function Hero() {
+  // const stars = new Array(200).fill(null);
+
   return (
     <main className="flex flex-row h-[calc(100vh-100px)] px-[5vw] overflow-hidden relative">
+      {/* {stars.map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute w-1 h-1 bg-white rounded-full"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+          }}
+          variants={starVariants}
+          initial="hidden"
+          animate="visible"
+        />
+      ))} */}
       <LeftSideHero className="z-10 flex-1" />
       <RightSideHero className="z-10 flex-1" />
 
