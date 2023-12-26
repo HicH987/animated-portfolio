@@ -36,9 +36,10 @@ export function LeftSideHero({ className }) {
       >
         <h1 className="flex text-3xl text-slate-300">
           <motion.span
-            initial={{ rotate: 0 }}
+            initial={{ rotate: 0, scale: 1 }}
             animate={{
               rotate: [20, -20, 20, -20, 0],
+              scale: [1, 1.2, 1, 1.2, 1],
             }}
             transition={{
               type: "linear",
