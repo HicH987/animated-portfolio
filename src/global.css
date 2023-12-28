@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/*root*/
+:root {
+  --bg-app: linear-gradient(
+    255deg,
+    hsl(240deg 43% 15%) 0%,
+    hsl(240deg 40% 12%) 38%,
+    hsl(240deg 41% 8%) 100%
+  );
+}
 * {
   padding: 0;
   margin: 0;
@@ -10,13 +19,7 @@
 }
 
 body {
-  /* background-color: #0c0c1d; */
-  background-image: linear-gradient(
-    255deg,
-    hsl(240deg 43% 15%) 0%,
-    hsl(240deg 40% 12%) 38%,
-    hsl(240deg 41% 8%) 100%
-  );
+  background-image: var(--bg-app);
   color: lightgray;
 }
 a {
@@ -25,8 +28,11 @@ a {
 }
 
 /* ---Smooth scrolling--- */
-/* Enable mandatory vertical scrolling snapping for the entire HTML document => 
-i.e: his means that when scrolling vertically, the content will snap to specific positions, making the scrolling experience smoother and more controlled */
+/* 
+  Enable mandatory vertical scrolling snapping for the entire HTML document => 
+  i.e: his means that when scrolling vertically, the content will snap to specific positions, 
+  making the scrolling experience smoother and more controlled 
+*/
 html {
   scroll-snap-type: y mandatory;
 
@@ -46,7 +52,7 @@ section {
 }
 
 ::-webkit-scrollbar-track {
-  background: #19193b;
+  background-image: var(--bg-app);
 }
 
 ::-webkit-scrollbar-thumb {
