@@ -7,8 +7,8 @@ import Services from "@/Components/Services/Services";
 import "@/global.css";
 
 const App = () => {
-  const sectionStyle= "h-screen snap-center"
-  
+  const sectionStyle = "h-screen snap-center";
+
   return (
     <main className="flex flex-col">
       <Cursor />
@@ -31,7 +31,7 @@ const App = () => {
       </section>
 
       <section id="Portfolio">
-        <Portfolio />
+        <Portfolio sectionStyle={sectionStyle} />
       </section>
 
       <section className={`${sectionStyle}`} id="Contact">
