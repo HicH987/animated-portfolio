@@ -37,7 +37,7 @@ html {
 /* Define the scrolling behavior for each section */
 section {
   /* Center-align each section when snapping during scrolling */
-  scroll-snap-align: center;
+  /* scroll-snap-align: center; */
 }
 
 /* Customize the scrollbar */
