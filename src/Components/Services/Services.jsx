@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function Services() {
   const services = [
     {
@@ -22,53 +24,97 @@ export default function Services() {
     },
   ];
 
+  const textHighlightAnimation = {
+    color: "#ffa500",
+    transition: { duration: 0.3, ease: "easeInOut" },
+  };
   return (
-    <div className="flex flex-col gap-1 p-5">
+    <div className="flex flex-col gap-1 p-5 cursor-default">
       <div className="flex flex-row items-center justify-end">
-        <p className="w-1/3 pr-3 text-3xl text-right font-extralight">
+        <motion.p
+          className="w-1/3 pr-3 text-3xl text-right font-extralight"
+          whileHover={textHighlightAnimation}
+        >
           I focus on helping your brand grow and move forward
-        </p>
+        </motion.p>
         <hr className="w-1/4 border-gray-500" />
       </div>
 
       <div className="flex gap-5">
-        <img
+        <motion.img
           className="object-cover h-32 rounded-full w-72 outline outline-[#ffa500]"
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.3, type: "tween" },
+          }}
           src="/people.webp"
           alt=""
         />
         <p className="text-8xl font-extralight">
-          <b className="font-bold">Unique</b> Ideas
+          <motion.b className="font-bold" whileHover={textHighlightAnimation}>
+            Unique
+          </motion.b>{" "}
+          Ideas
         </p>
       </div>
 
       <div className="flex flex-row-reverse gap-5">
-        <button className="h-32 rounded-full w-72 outline outline-[#ffa500]">
+        <motion.button
+          className="h-32 rounded-full w-72 outline outline-[#ffa500] text-2xl"
+          whileHover={{
+            scale: 1.05,
+            backgroundColor: "#ffa500",
+            color: "#000",
+            transition: { duration: 0.3, type: "tween" },
+          }}
+        >
           What I Do ?
-        </button>
+        </motion.button>
         <p className="text-8xl font-extralight">
-          <b className="font-bold">For Your</b> Business
+          <motion.b className="font-bold" whileHover={textHighlightAnimation}>
+            For Your
+          </motion.b>{" "}
+          Business
         </p>
       </div>
 
       <div className="flex flex-col gap-5">
         <h2 className="text-4xl font-extralight">
-          <b className="font-bold">Services</b> Offered
+          <motion.b className="font-bold" whileHover={textHighlightAnimation}>
+            Services
+          </motion.b>{" "}
+          Offered
         </h2>
-        <ul className="flex">
+        <ul className="flex ">
           {services.map((service, index) => (
-            <li
+            <motion.li
               key={index}
               className="flex flex-col gap-5 border border-[#ffa500] px-5 py-3"
+              whileHover={{
+                // scale: 1.05,
+                backgroundColor: "#d3d3d3",
+                color: "#13132e",
+                transition: { duration: 0.3, type: "tween" },
+              }}
             >
-              <h1 className="text-3xl font-bold h-[20%]">{service.title} </h1>
-              <p className="text-justify font-extralight">
+              <h1 className="text-3xl font-bold h-1/4">{service.title} </h1>
+              <p className="text-justify font-extralight h-2/4">
                 {service.description}
               </p>
-              <button className="bg-[#ffa500] text-black px-5 py-3 rounded-sm w-full self-end mb-5">
+              <motion.button
+                className="bg-[#ffa500] text-black px-5 py-3 rounded-sm w-full mb-5"
+                whileHover={{
+                  scale: 1.1,
+                  transition: { duration: 0.3, type: "tween" },
+                }}
+                whileTap={{
+                  scale: 0.9,
+                  transition: { duration: 0.3, type: "tween" },
+                }}
+              >
                 Learn More
-              </button>
-            </li>
+              </motion.button>
+            </motion.li>
           ))}
         </ul>
       </div>
