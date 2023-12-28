@@ -1,3 +1,4 @@
+import Contact from "@/Components/Contact/Contact";
 import Cursor from "@/Components/Cursor/Cursor";
 import Hero from "@/Components/Hero/Hero";
 import NavBar from "@/Components/NavBar/NavBar";
@@ -35,7 +36,7 @@ const App = () => {
       </section>
 
       <section className={`${sectionStyle}`} id="Contact">
-        Contact
+        <Contact />
       </section>
     </main>
   );
