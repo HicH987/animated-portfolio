@@ -20,7 +20,7 @@ export default function Hero() {
   // const stars = new Array(200).fill(null);
 
   return (
-    <main className="flex flex-row h-[calc(100vh-100px)] px-[5vw] overflow-hidden relative">
+    <main className="flex flex-row h-[calc(100vh-100px)] px-[5vw] overflow-hidden relative max-hero-md:px-0">
       {/* {stars.map((_, i) => (
         <motion.div
           key={i}
@@ -34,8 +34,8 @@ export default function Hero() {
           animate="visible"
         />
       ))} */}
-      <LeftSideHero className="z-10 flex-1" />
-      <RightSideHero className="z-10 flex-1" />
+      <LeftSideHero className="z-10 flex-1 max-hero-md:bg-[url('/hero_hich.png')] bg-cover bg-center" />
+      <RightSideHero className="z-10 flex-1 max-hero-md:hidden" />
 
       <div className="absolute bottom-[-120px] left-0 z-0">
         <motion.h1
