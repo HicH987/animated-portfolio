@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./src/Components/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/Components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {},
     screens: {
@@ -14,6 +18,7 @@ export default {
       "max-lg": { max: "1023px" },
       "max-xl": { max: "1279px" },
       "max-2xl": { max: "1535px" },
+      "max-hero-md": { max: "870px" },
     },
   },
   plugins: [],
