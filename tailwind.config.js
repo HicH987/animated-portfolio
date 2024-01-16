@@ -19,6 +19,7 @@ export default {
       "max-xl": { max: "1279px" },
       "max-2xl": { max: "1535px" },
       "max-hero-md": { max: "870px" },
+      "max-services-md": { max: "913px" },
     },
   },
   plugins: [],
